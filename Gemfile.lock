@@ -241,3 +241,9 @@ DEPENDENCIES
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
   will_paginate (= 3.0.7)
+
+RUBY VERSION
+   ruby 2.2.1p85
+
+BUNDLED WITH
+   1.13.6
