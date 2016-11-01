@@ -6,12 +6,12 @@ import lxml.html
 from lxml.html.clean import Cleaner
 
 # Top level values, these don't change.
-url = 'http://www.trico.haverford.edu/cgi-bin/courseguide/cgi-bin/search.cgi'
+url = 'https://trico.haverford.edu/cgi-bin/courseguide/cgi-bin/search.cgi'
 user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-headers = { 'User-Agent' : user_agent}
+headers = { 'User-Agent' : user_agent }
 
 # Well, maybe this will change later.
-semester = 'Fall_2015'
+semester = 'Spring_2016'
 
 # Priming read.
 run_to = '0'
@@ -29,8 +29,7 @@ with urllib.request.urlopen(req) as response:
     html = response.read().decode()
     num_courses = int(re.search('(?<=<B>Listing 1 to 50 of )\d+(?=</B>)', html).group(0))
 
-# Request as many webpages we need to read all courses for
-# that semester.
+# Request as many webpages we need to read all courses for that semester.
 
 cleaner = Cleaner(style=True,
                   links=True,
